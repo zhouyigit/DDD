@@ -18,7 +18,7 @@ out/
 
 # Gradle files
 DDD/.gradle/
-DDD/build/
+build/
 
 # Local configuration file (sdk path, etc)
 DDD/local.properties

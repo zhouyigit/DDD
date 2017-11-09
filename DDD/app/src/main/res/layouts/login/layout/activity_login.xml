@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--账号-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:background="#999999"
+            android:text="账号:"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="#777777"
+            android:phoneNumber="true"
+            android:hint="手机号"
+            android:textSize="14dp"
+            android:singleLine="true"/>
+
+    </LinearLayout>
+
+    <!--密码-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:background="#888888"
+            android:text="密码:"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="#777777"
+            android:password="true"
+            android:textSize="14dp"
+            android:singleLine="true"/>
+
+    </LinearLayout>
+
+    <!--登录 忘记密码 注册-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <Button
+            android:id="@+id/login_button_login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="登录"/>
+
+        <Button
+            android:id="@+id/login_button_forget"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@+id/login_button_login"
+            android:layout_alignLeft="@id/login_button_login"
+            android:text="忘记密码"
+            android:textSize="8dp"/>
+
+        <Button
+            android:id="@+id/login_button_register"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@id/login_button_login"
+            android:layout_alignRight="@id/login_button_login"
+            android:text="注册"
+            android:textSize="8dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "26.0.0"
+    defaultConfig {
+        applicationId "com.zy.ddd"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            res.srcDirs =
+                [
+                    'src/main/res/layouts/assembly',
+                    'src/main/res/layouts/basic',
+                    'src/main/res/layouts/ddd',
+                    'src/main/res/layouts/login',
+                    'src/main/res/layouts/order',
+//                    'src/main/res/layouts',
+                    'src/main/res'
+                ]
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    testCompile 'junit:junit:4.12'
+
+    //以上是默认包
+    //以下是功能包
+
+    //高德3D地图so及jar
+    compile 'com.amap.api:3dmap:latest.integration'
+    //高德定位功能
+    compile 'com.amap.api:location:latest.integration'
+    //高德搜索功能
+    compile 'com.amap.api:search:latest.integration'
+}
